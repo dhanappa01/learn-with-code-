@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn with code lesson 4 test</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: aqua;
+        }
+p{
+    text-align: center;
+}
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 50px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transition: ease-in-out 0.50s ;
+            transform: scale(1.2);
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+ 
+        <form id="quizForm">
+        
+            <div class="question">
+                <p>1) What is the <code>id</code> attribute?</p>
+                <div class="options">
+                    <input type="radio" name="q1" value="a"> It uniquely identifies an element<br>
+                    <input type="radio" name="q1" value="b"> It applies styles to an element<br>
+                    <input type="radio" name="q1" value="c"> It specifies the class of an element<br>
+                    <input type="radio" name="q1" value="d"> None of the above<br>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>2) What is <code>float</code>?</p>
+                <div class="options">
+                    <input type="radio" name="q2" value="a"> It is used to float elements to the left or right<br>
+                    <input type="radio" name="q2" value="b"> It is used to change the background color<br>
+                    <input type="radio" name="q2" value="c"> It defines the font size<br>
+                    <input type="radio" name="q2" value="d"> None of the above<br>
+                </div>
+            </div>
+
+     
+            <div class="question">
+                <p>3) How would you change font of "I am making my own website" text in paragraph tag of an HTML page in Verdana Font?</p>
+                <div class="options">
+                    <input type="radio" name="q3" value="a"> <code>&lt;p style="font-family: Verdana;"&gt;I am making my own website&lt;/p&gt;</code><br>
+                    <input type="radio" name="q3" value="b"> <code>&lt;p style="font-family: Arial;"&gt;I am making my own website&lt;/p&gt;</code><br>
+                    <input type="radio" name="q3" value="c"> <code>&lt;p&gt;I am making my own website&lt;/p&gt;</code><br>
+                    <input type="radio" name="q3" value="d"> None of the above<br>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>4) How would you change font size to 10px with center align "3 things around me are!" text in paragraph tag of an HTML page?</p>
+                <div class="options">
+                    <input type="radio" name="q4" value="a"> <code>&lt;p style="font-size: 10px; text-align: center;"&gt;3 things around me are!&lt;/p&gt;</code><br>
+                    <input type="radio" name="q4" value="b"> <code>&lt;p style="font-size: 15px; text-align: right;"&gt;3 things around me are!&lt;/p&gt;</code><br>
+                    <input type="radio" name="q4" value="c"> <code>&lt;p&gt;3 things around me are!&lt;/p&gt;</code><br>
+                    <input type="radio" name="q4" value="d"> None of the above<br>
+                </div>
+            </div>
+
+         
+            <div class="question">
+                <p>5) How would you align the heading "Coding is awesome!" to the right of the screen space?</p>
+                <div class="options">
+                    <input type="radio" name="q5" value="a"> <code>&lt;h1 style="text-align: right;"&gt;Coding is awesome!&lt;/h1&gt;</code><br>
+                    <input type="radio" name="q5" value="b"> <code>&lt;h1&gt;Coding is awesome!&lt;/h1&gt;</code><br>
+                    <input type="radio" name="q5" value="c"> <code>&lt;h1 style="text-align: left;"&gt;Coding is awesome!&lt;/h1&gt;</code><br>
+                    <input type="radio" name="q5" value="d"> None of the above<br>
+                </div>
+            </div>
+
+            <div class="question">
+                <p>6) How would add border to "Adding border is easy" of 10px solid blue?</p>
+                <div class="options">
+                    <input type="radio" name="q6" value="a"> <code>&lt;p style="border: 10px solid blue;"&gt;Adding border is easy&lt;/p&gt;</code><br>
+                    <input type="radio" name="q6" value="b"> <code>&lt;p style="border: 5px dashed red;"&gt;Adding border is easy&lt;/p&gt;</code><br>
+                    <input type="radio" name="q6" value="c"> <code>&lt;p&gt;Adding border is easy&lt;/p&gt;</code><br>
+                    <input type="radio" name="q6" value="d"> None of the above<br>
+                </div>
+            </div>
+
+      
+            <div class="question">
+                <p>7) Pappu wants to float the image i.e. Taj Mahal.png located in the E drive of your computer to the right of the screen space. Which of the following program is correct?</p>
+                <div class="options">
+                    <input type="radio" name="q7" value="a"> <code>&lt;img src="E:/Taj Mahal.png" style="float: right;"&gt;</code><br>
+                    <input type="radio" name="q7" value="b"> <code>&lt;img src="E:/Taj Mahal.png" style="float: left;"&gt;</code><br>
+                    <input type="radio" name="q7" value="c"> <code>&lt;img src="E:/Taj Mahal.png" style="border: 1px solid black;"&gt;</code><br>
+                    <input type="radio" name="q7" value="d"> None of the above<br>
+                </div>
+            </div>
+
+     
+            <div class="question">
+                <p>8) How would you use an id to change the width of the picture to 350px, float it towards left with margin of 15px?</p>
+                <div class="options">
+                    <input type="radio" name="q8" value="a"> <code>&lt;img id="pic" src="image.png"&gt;</code><br>
+                    <input type="radio" name="q8" value="b"> <code>&lt;style&gt;#pic { width: 350px; float: left; margin: 15px; }&lt;/style&gt;</code><br>
+                    <input type="radio" name="q8" value="c"> <code>&lt;img src="image.png" style="width: 350px; float: left; margin: 15px;"&gt;</code><br>
+                    <input type="radio" name="q8" value="d"> None of the above<br>
+                </div>
+            </div>
+
+     
+            <div class="question">
+                <p>9) How would you use an id to make the text center aligned, blue with font of Verdana of a <code>&lt;p&gt;</code> tag having content "I love India"?</p>
+                <div class="options">
+                    <input type="radio" name="q9" value="a"> <code>&lt;style&gt;#loveIndia { text-align: center; color: blue; font-family: Verdana; }&lt;/style&gt;</code><br>
+                    <input type="radio" name="q9" value="b"> <code>&lt;p id="loveIndia"&gt;I love India&lt;/p&gt;</code><br>
+                    <input type="radio" name="q9" value="c"> <code>&lt;style&gt;#loveIndia { text-align: left; color: red; font-family: Arial; }&lt;/style&gt;</code><br>
+                    <input type="radio" name="q9" value="d"> None of the above<br>
+                </div>
+            </div>
+
+            <button type="button" class="submit-btn" onclick="calculateScore()">Submit Quiz</button>
+        </form>
+
+        <div id="result" class="result">
+            Your score is: <span id="score">0</span>/9
+        </div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            var totalQuestions = 9;
+            var score = 0;
+            var correctAnswers = {
+                q1: "a",
+                q2: "a",
+                q3: "a",
+                q4: "a",
+                q5: "a",
+                q6: "a",
+                q7: "a",
+                q8: "b",
+                q9: "a"
+            };
+
+            for (var i = 1; i <= totalQuestions; i++) {
+                var answer = document.querySelector('input[name="q' + i + '"]:checked');
+                if (answer && answer.value === correctAnswers["q" + i]) {
+                    score++;
+                }
+            }
+
+            document.getElementById("score").textContent = score;
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

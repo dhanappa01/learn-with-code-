@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn with Code - Lesson 4</title>
+    <style>
+
+        body {
+            background-color: aqua;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: antiquewhite;
+            margin: 10px 0;
+        }
+
+        .hii {
+            margin-top: 10px;
+            border-radius: 50%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .hii:hover {
+            transform: scale(1.2);
+        }
+
+        iframe {
+            border-radius: 20px;
+            box-shadow: 1.2px 1.2px 30px rgb(241, 110, 110);
+            margin-top: 30px;
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            aspect-ratio: 16 / 9; 
+        }
+
+        button {
+            background-color: #FF00C8;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 30px;
+            box-shadow: 1.2px 1.2px 30px rgb(255, 0, 200);
+            font-size: 18px;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        button:hover {
+            transform: scale(1.3);
+        }
+
+   
+        @media screen and (max-width: 768px) {
+            iframe {
+                width: 90%;
+                max-width: 100%;
+            }
+
+            button {
+                width: 80%;
+                font-size: 16px;
+            }
+
+            .hii {
+                width: 40px;
+                height: 40px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+        }
+
+    
+        @media screen and (max-width: 480px) {
+            iframe {
+                width: 100%;
+                max-width: 100%;
+                height: 180px;
+            }
+
+            button {
+                width: 90%;
+                font-size: 14px;
+            }
+
+            .hii {
+                width: 35px;
+                height: 35px;
+            }
+
+            h1 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Learn with Code</h1>
+        <img class="hii" width="50px" src="learn.png" alt="logo">
+    </header>
+    <main>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/_fr2nt9J-pM?si=s8b8NSVf29jMpY3J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button><a href="foquiz.html" style="text-decoration: none; color: white;">Lesson 4 Test</a></button>
+    </main>
+</body>
+</html>

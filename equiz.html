@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn with code lesson 7 test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: aqua;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 50px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transition: ease-in-out 0.50s;
+            transform: scale(1.2);
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+
+    <div id="quiz">
+
+        <div class="question" id="q1">
+            <p>1) What is link selector attribute?</p>
+            <label>
+                <input type="radio" name="q1" value="A"> A) It styles the link before being clicked.
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="B"> B) It styles the link after being clicked.
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="C"> C) It styles the link when the mouse is over it.
+            </label>
+        </div>
+
+        <div class="question" id="q2">
+            <p>2) What is hover selector attribute?</p>
+            <label>
+                <input type="radio" name="q2" value="A"> A) It is used to style links when hovered.
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="B"> B) It is used to style the button when clicked.
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="C"> C) It is used to style the text when typed.
+            </label>
+        </div>
+
+        <div class="question" id="q3">
+            <p>3) What is visited selector attribute?</p>
+            <label>
+                <input type="radio" name="q3" value="A"> A) It styles the link that has been clicked.
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="B"> B) It styles the link when hovered.
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="C"> C) It styles the active link.
+            </label>
+        </div>
+
+        <div class="question" id="q4">
+            <p>4) What is active selector attribute?</p>
+            <label>
+                <input type="radio" name="q4" value="A"> A) It styles the link when it is being clicked.
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="B"> B) It styles the link after it has been clicked.
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="C"> C) It styles the link when the page is loaded.
+            </label>
+        </div>
+
+        <div class="question" id="q5">
+            <p>5) We want to write a program such that button changes its color when the mouse pointer comes over the button. Which of the following program given will work?</p>
+            <label>
+                <input type="radio" name="q5" value="A"> A) <code>a:hover { color: blue; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="B"> B) <code>button:hover { background-color: green; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="C"> C) <code>a:hover { background-color: red; }</code>
+            </label>
+        </div>
+
+        <div class="question" id="q6">
+            <p>6) We want to write a program such that unvisited button is of red color. Which of the following program given will work?</p>
+            <label>
+                <input type="radio" name="q6" value="A"> A) <code>button:link { color: red; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q6" value="B"> B) <code>button:visited { color: red; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q6" value="C"> C) <code>button:active { color: red; }</code>
+            </label>
+        </div>
+
+        <div class="question" id="q7">
+            <p>7) We want to write a program such that visited button is of green color. Which of the following program given will work?</p>
+            <label>
+                <input type="radio" name="q7" value="A"> A) <code>button:visited { color: green; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q7" value="B"> B) <code>button:link { color: green; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q7" value="C"> C) <code>button:hover { color: green; }</code>
+            </label>
+        </div>
+
+        <div class="question" id="q8">
+            <p>8) We want to write a program such that active button is of pink color. Which of the following program given will work?</p>
+            <label>
+                <input type="radio" name="q8" value="A"> A) <code>button:active { color: pink; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q8" value="B"> B) <code>button:visited { color: pink; }</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q8" value="C"> C) <code>button:link { color: pink; }</code>
+            </label>
+        </div>
+
+        <button onclick="submitQuiz()">Submit Quiz</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<script>
+    let answers = {};
+    const totalQuestions = 8;
+
+    function selectAnswer(event) {
+        const questionNumber = event.target.name;
+        const answer = event.target.value;
+        answers[questionNumber] = answer;
+    }
+
+    document.querySelectorAll('input[type="radio"]').forEach(option => {
+        option.addEventListener('change', selectAnswer);
+    });
+
+    function submitQuiz() {
+        for (let i = 1; i <= totalQuestions; i++) {
+            if (!answers['q' + i]) {
+                alert("Please answer all the questions before submitting.");
+                return;
+            }
+        }
+
+        const correctAnswers = {
+            q1: 'A',
+            q2: 'A',
+            q3: 'A',
+            q4: 'A',
+            q5: 'B',
+            q6: 'A',
+            q7: 'A',
+            q8: 'A'
+        };
+
+        let score = 0;
+
+        for (let question in correctAnswers) {
+            if (answers[question] === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        document.getElementById("result").innerHTML = `You scored ${score} out of ${totalQuestions}!`;
+    }
+</script>
+
+</body>
+</html>

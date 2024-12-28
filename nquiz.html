@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn with code lesson 9 test</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: aqua;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 50px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transition: ease-in-out 0.50s;
+            transform: scale(1.2);
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="quiz-container">
+
+    <div id="quiz">
+
+        <div class="question" id="q1">
+            <p>1) What is the onload attribute?</p>
+            <label>
+                <input type="radio" name="q1" value="A"> A) It is used to execute a function when the page loads.
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="B"> B) It is used to trigger an event when a button is clicked.
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="C"> C) It is used to load an external JavaScript file.
+            </label>
+        </div>
+
+        <div class="question" id="q2">
+            <p>2) Which of the following is the correct code to run a function "add" to add 3 and 8 when the window is loaded in JavaScript?</p>
+            <label>
+                <input type="radio" name="q2" value="A"> A) <code>window.onload = add(3, 8);</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="B"> B) <code>window.addEventListener("load", add(3, 8));</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q2" value="C"> C) <code>window.onload = function() { add(3, 8); }</code>
+            </label>
+        </div>
+
+        <div class="question" id="q3">
+            <p>3) What is the 'this' keyword?</p>
+            <label>
+                <input type="radio" name="q3" value="A"> A) It refers to the current object.
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="B"> B) It refers to the window object in JavaScript.
+            </label><br>
+            <label>
+                <input type="radio" name="q3" value="C"> C) It refers to the parent element in HTML.
+            </label>
+        </div>
+
+        <div class="question" id="q4">
+            <p>4) The given program is to change the color of the text in the button to red when the button is clicked. Fill in the blank with the correct option. </p>
+            <label>
+                <input type="radio" name="q4" value="A"> A) <code>document.getElementById("btn").style.color = "red";</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="B"> B) <code>document.getElementById("btn").style.background = "red";</code>
+            </label><br>
+            <label>
+                <input type="radio" name="q4" value="C"> C) <code>document.getElementById("btn").textColor = "red";</code>
+            </label>
+        </div>
+
+        <div class="question" id="q5">
+            <p>5) What is the purpose of a JavaScript function?</p>
+            <label>
+                <input type="radio" name="q5" value="A"> A) To perform a task when called.
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="B"> B) To define variables in JavaScript.
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="C"> C) To manipulate HTML elements.
+            </label>
+        </div>
+
+        <!-- Added 3 more questions -->
+        <div class="question" id="q6">
+            <p>6) What is a closure in JavaScript?</p>
+            <label>
+                <input type="radio" name="q6" value="A"> A) A function that retains access to its lexical scope, even when the function is executed outside of that scope.
+            </label><br>
+            <label>
+                <input type="radio" name="q6" value="B"> B) A function that does not have access to its outer function’s variables.
+            </label><br>
+            <label>
+                <input type="radio" name="q6" value="C"> C) A global function that can be accessed anywhere.
+            </label>
+        </div>
+
+        <div class="question" id="q7">
+            <p>7) What is an event listener in JavaScript?</p>
+            <label>
+                <input type="radio" name="q7" value="A"> A) It listens for a specific event and executes a function when the event is triggered.
+            </label><br>
+            <label>
+                <input type="radio" name="q7" value="B"> B) It is used to listen to a user’s actions like typing or clicking.
+            </label><br>
+            <label>
+                <input type="radio" name="q7" value="C"> C) It triggers an event every time a page is loaded.
+            </label>
+        </div>
+
+        <div class="question" id="q8">
+            <p>8) What does 'null' represent in JavaScript?</p>
+            <label>
+                <input type="radio" name="q8" value="A"> A) An undefined value or empty object reference.
+            </label><br>
+            <label>
+                <input type="radio" name="q8" value="B"> B) A reference to an unknown variable.
+            </label><br>
+            <label>
+                <input type="radio" name="q8" value="C"> C) A number value representing nothing.
+            </label>
+        </div>
+
+        <button onclick="submitQuiz()">Submit Quiz</button>
+
+        <div class="result" id="result"></div>
+    </div>
+</div>
+
+<script>
+    let answers = {};
+    const totalQuestions = 8;
+
+    function selectAnswer(event) {
+        const questionNumber = event.target.name;
+        const answer = event.target.value;
+        answers[questionNumber] = answer;
+    }
+
+    document.querySelectorAll('input[type="radio"]').forEach(option => {
+        option.addEventListener('change', selectAnswer);
+    });
+
+    function submitQuiz() {
+        for (let i = 1; i <= totalQuestions; i++) {
+            if (!answers['q' + i]) {
+                alert("Please answer all the questions before submitting.");
+                return;
+            }
+        }
+
+        const correctAnswers = {
+            q1: 'A',
+            q2: 'C',
+            q3: 'A',
+            q4: 'A',
+            q5: 'A',
+            q6: 'A',
+            q7: 'A',
+            q8: 'A'
+        };
+
+        let score = 0;
+
+        for (let question in correctAnswers) {
+            if (answers[question] === correctAnswers[question]) {
+                score++;
+            }
+        }
+
+        document.getElementById("result").innerHTML = `You scored ${score} out of ${totalQuestions}!`;
+    }
+</script>
+
+</body>
+</html>

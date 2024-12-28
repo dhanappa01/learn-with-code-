@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>learn with code courses</title>
+    <style>
+    
+        body {
+            background-color: aqua;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            color: antiquewhite;
+            margin: 0;
+        }
+
+     
+        .hii {
+            margin-top: 20px;
+            border-radius: 50%;
+            transition: ease-in-out 0.50s;
+        }
+
+        .hii:hover {
+            transform: scale(1.2);
+        }
+
+
+        .con {
+            margin-top: 20px;
+        }
+
+        .con img {
+            border-radius: 20px;
+            max-width: 100%; 
+            width: 200px; 
+            height: auto;
+        }
+
+ 
+        button {
+            width: 200px;
+            margin-top: 30px;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+     
+        @media screen and (max-width: 768px) {
+            .hii {
+                width: 40px;
+                height: 40px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .con img {
+                width: 150px;
+            }
+
+            button {
+                width: 180px; 
+                font-size: 16px; 
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 20px;
+            }
+
+            .con img {
+                width: 130px; 
+            }
+
+            button {
+                width: 150px; 
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Learn with Code</h1>
+        <img class="hii" width="50px" src="learn.png" alt="logo">
+    </header>
+
+    <main>
+        <div class="con">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <button><a href="course.html">Continue Course</a></button>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lesson 1 quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: aqua;
+        }
+p{
+    text-align: center;
+}
+        h1 {
+            text-align: center;
+        }
+
+        .question {
+            margin-bottom: 50px;
+            border: 2px solid black;
+            padding: 20px;
+            border-radius: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+            transition: ease-in-out 0.50s ;
+            transform: scale(1.2);
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <form id="quiz-form">
+        <div class="question">
+            <p>1) Why should we learn to code websites and web applications?</p>
+            <input type="radio" name="q1" value="B"> B) a creative way to share ideas with many<br>
+            <input type="radio" name="q1" value="A"> A) this would be the only skill required in a job<br>
+            <input type="radio" name="q1" value="C"> C) it will help to score good marks in exam<br>
+            <input type="radio" name="q1" value="D"> D) all of the above<br>
+        </div>
+        <div class="question">
+            <p>2) What is high level programming language?</p>
+            <input type="radio" name="q2" value="A"> A) a human friendly programming language<br>
+            <input type="radio" name="q2" value="B"> B) a language of 0 and 1<br>
+            <input type="radio" name="q2" value="C"> C) a language used by developed countries only<br>
+            <input type="radio" name="q2" value="D"> D) a language used by under developed countries<br>
+        </div>
+        <div class="question">
+            <p>3) What is a machine language?</p>
+            <input type="radio" name="q3" value="B"> B) a language of 0 and 1<br>
+            <input type="radio" name="q3" value="A"> A) a human friendly programming language<br>
+            <input type="radio" name="q3" value="C"> C) a language used by developed countries only<br>
+            <input type="radio" name="q3" value="D"> D) a language used by under developed countries<br>
+        </div>
+        <div class="question">
+            <p>4) What HTML stands for?</p>
+            <input type="radio" name="q4" value="B"> B) HyperText Markup Language<br>
+            <input type="radio" name="q4" value="A"> A) HyperTink Madeup Language<br>
+            <input type="radio" name="q4" value="C"> C) HoverText Markup Language<br>
+            <input type="radio" name="q4" value="D"> D) HoverText Madeup Language<br>
+        </div>
+        <div class="question">
+            <p>5) What does CSS stands for?</p>
+            <input type="radio" name="q5" value="D"> D) Cascading Style Sheets<br>
+            <input type="radio" name="q5" value="A"> A) Cascading Slope Sheets<br>
+            <input type="radio" name="q5" value="B"> B) Cascading Shape Sheets<br>
+            <input type="radio" name="q5" value="C"> C) Costume Style Sheets<br>
+        </div>
+        <div class="question">
+            <p>6) What is JavaScript?</p>
+            <input type="radio" name="q6" value="B"> B) a programming language<br>
+            <input type="radio" name="q6" value="A"> A) a markup language to identify the content on the webpage<br>
+            <input type="radio" name="q6" value="C"> C) a Microsoft Office application<br>
+            <input type="radio" name="q6" value="D"> D) a web application<br>
+        </div>
+        <div class="question">
+            <p>7) HTML is used for _______________</p>
+            <input type="radio" name="q7" value="A"> A) to give structure of the webpage and show the content<br>
+            <input type="radio" name="q7" value="B"> B) control presentation, formatting, and layout<br>
+            <input type="radio" name="q7" value="C"> C) modify the content and its presentation on the webpage<br>
+            <input type="radio" name="q7" value="D"> D) to exchange data on the internet<br>
+        </div>
+        <div class="question">
+            <p>8) CSS is used for ____________</p>
+            <input type="radio" name="q8" value="B"> B) control presentation, formatting, and layout<br>
+            <input type="radio" name="q8" value="A"> A) to give structure of the webpage and show the content<br>
+            <input type="radio" name="q8" value="C"> C) modify the content and its presentation on the webpage<br>
+            <input type="radio" name="q8" value="D"> D) to exchange data on the internet<br>
+        </div>
+        <div class="question">
+            <p>9) JavaScript is used for _____________</p>
+            <input type="radio" name="q9" value="C"> C) modify the content and its presentation on the webpage<br>
+            <input type="radio" name="q9" value="A"> A) to give structure of the webpage and show the content<br>
+            <input type="radio" name="q9" value="B"> B) control presentation, formatting, and layout<br>
+            <input type="radio" name="q9" value="D"> D) to exchange data on the internet<br>
+        </div>
+        <div class="question">
+            <p>10) Which of the following tools are needed to make a webpage?</p>
+            <input type="radio" name="q10" value="B"> B) browser and notepad<br>
+            <input type="radio" name="q10" value="A"> A) notepad and environment<br>
+            <input type="radio" name="q10" value="C"> C) Power Point and environment<br>
+            <input type="radio" name="q10" value="D"> D) Internet and environment<br>
+        </div>
+        <div class="question">
+            <p>11) What is the use of IDE (environment)?</p>
+            <input type="radio" name="q11" value="C"> C) facilitates writing codes by syntax highlighting, intelligent code completion, etc.<br>
+            <input type="radio" name="q11" value="A"> A) saves electricity<br>
+            <input type="radio" name="q11" value="B"> B) writes code for us<br>
+            <input type="radio" name="q11" value="D"> D) helps us write short codes<br>
+        </div>
+        <br>
+        <button type="button" onclick="calculateScore()">Submit</button>
+    </form>
+
+    <h2 id="result"></h2>
+
+    <script>
+        function calculateScore() {
+            var score = 0;
+            
+          
+            var correctAnswers = {
+                q1: 'B',
+                q2: 'A',
+                q3: 'B',
+                q4: 'B',
+                q5: 'D',
+                q6: 'B',
+                q7: 'A',
+                q8: 'B',
+                q9: 'C',
+                q10: 'B',
+                q11: 'C'
+            };
+            
+            for (var i = 1; i <= 11; i++) {
+                var selectedAnswer = document.querySelector(`input[name="q${i}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[`q${i}`]) {
+                    score++;
+                }
+            }
+            
+         
+            document.getElementById('result').innerText = `Your score is: ${score} out of 11`;
+        }
+    </script>
+
+</body>
+</html>
